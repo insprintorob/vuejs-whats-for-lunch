@@ -1,5 +1,5 @@
 <template>
   <div class="home">
-    <button class="whats-for-lunch">Whats For Lunch</button>
+    <a class="btn btn-primary" href="#/whats-for-lunch">Whats For Lunch</a>
   </div>
 </template>
