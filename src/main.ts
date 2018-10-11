@@ -3,9 +3,6 @@ import App from './App.vue';
 import router from './router';
 import WhatsForLunch from './views/WhatsForLunch.vue';
 
-// Import bootstrap
-require('../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss');
-
 Vue.config.productionTip = false;
 
 /**
