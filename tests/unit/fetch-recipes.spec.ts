@@ -5,7 +5,8 @@ let mockResponse = {
     {
       "title": "Ham and Cheese Toastie",
       "ingredients": ["Ham", "Cheese", "Bread", "Butter"]
-    }, {
+    },
+    {
       "title": "Fry-up",
       "ingredients": ["Bacon", "Eggs", "Baked Beans", "Mushrooms", "Sausage", "Bread"]
     }
