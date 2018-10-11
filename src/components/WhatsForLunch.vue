@@ -2,7 +2,7 @@
     <div>
         <h1>Heres whats for lunch</h1>
             <ul id="recipeList">
-                <li v-for="recipe in whatsForLunch">
+                <li v-for="recipe in whatsForLunch" v-bind:key="recipe.title">
                     {{ recipe.title }}
                 </li>
             </ul>
