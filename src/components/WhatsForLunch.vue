@@ -1,11 +1,12 @@
 <template>
   <div>
     <h1>Heres whats for lunch</h1>
-    <ul id="recipeList">
-      <li v-for="recipe in whatsForLunch">
-        {{ recipe.title }}
-      </li>
-    </ul>
+      <ul id="recipeList">
+        <li v-for="recipe in whatsForLunch">
+          {{ recipe.title }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script lang="ts">
