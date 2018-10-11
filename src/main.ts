@@ -11,10 +11,10 @@ Vue.config.productionTip = false;
 /**
  * Initialise VueJS
  */
-let vue = new Vue({
+const vue = new Vue({
   router,
   render: (h) => h(App),
   components : {
-    'whats-for-lunch' : WhatsForLunch
-  }
+    'whats-for-lunch' : WhatsForLunch,
+  },
 }).$mount('#app');

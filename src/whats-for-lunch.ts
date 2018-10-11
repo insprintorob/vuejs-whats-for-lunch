@@ -7,11 +7,11 @@ const fetch = require('node-fetch'); // Importing it makes it mockable
  * @return Promise
  * @throws Error
  */
-async function fetchRecipes() : Promise<Array<any>> {
-    let results : Array<any>;
+async function fetchRecipes(): Promise<any[]> {
+    let results: any[];
 
-    let response : any = await fetch('recipes.json');
-    let json = await response.json();
+    const response: any = await fetch('recipes.json');
+    const json = await response.json();
 
     if (!json || !json.recipes) {
         return Promise.reject(Error('Bad response. Maybe the internet is down?'));
@@ -27,11 +27,11 @@ async function fetchRecipes() : Promise<Array<any>> {
  * @return Promise
  * @throws Error
  */
-async function fetchIngredients() : Promise<Array<any>> {
-    let results : Array<any>;
+async function fetchIngredients(): Promise<any[]> {
+    let results: any[];
 
-    let response : any = await fetch('ingredients.json');
-    let json = await response.json();
+    const response: any = await fetch('ingredients.json');
+    const json = await response.json();
     if (!json || !json.ingredients) {
         return Promise.reject(Error('Bad response. Maybe the internet is down?'));
     }
@@ -44,11 +44,11 @@ async function fetchIngredients() : Promise<Array<any>> {
  * Return an array of recipes that are good to eat
  * @return Promise
  */
-async function whatsForLunch() : Promise<Array<any>> {
-    let whatsForLunch : Array<any> = [];
-    let bottomRecipes : Array<any> = [];
-    let recipes : any;
-    let ingredients : any;
+async function whatsForLunch(): Promise<any[]> {
+    const results: any[] = [];
+    const bottomRecipes: any[] = [];
+    let recipes: any;
+    let ingredients: any;
 
     try {
         recipes = await fetchRecipes();
@@ -59,14 +59,15 @@ async function whatsForLunch() : Promise<Array<any>> {
     }
 
     /**
-     * Using let in a for loop forces the JS interpereter to create a new copy of the variable for each iteration, which means var is faster
+     * Using let in a for loop forces the JS interpereter to create a new copy
+     * of the variable for each iteration, which means var is faster
      */
-    for (var recipe of recipes) {
+    for (const recipe of recipes) {
         let pastUseBy = false;
         let pastBestBefore = false;
 
-        for (var ingredient of recipe.ingredients) {
-            let thisIngredient = ingredients.find((element : any) => {
+        for (const ingredient of recipe.ingredients) {
+            const thisIngredient = ingredients.find((element: any) => {
                 return element.title === ingredient;
             });
 
@@ -75,9 +76,9 @@ async function whatsForLunch() : Promise<Array<any>> {
                 continue;
             }
 
-            let bestBefore = moment(thisIngredient['best-before']).unix();
-            let useBy = moment(thisIngredient['use-by']).unix();
-            let now = moment().unix();
+            const bestBefore = moment(thisIngredient['best-before']).unix();
+            const useBy = moment(thisIngredient['use-by']).unix();
+            const now = moment().unix();
 
             if (now > useBy) {
                 pastUseBy = true;
@@ -97,15 +98,15 @@ async function whatsForLunch() : Promise<Array<any>> {
             continue;
         }
 
-        whatsForLunch.push(recipe);
+        results.push(recipe);
     }
 
     // Insert recipes with ingredients past the best before date at the bottom
-    for (var bottomRecipe of bottomRecipes) {
-        whatsForLunch.push(bottomRecipe);
+    for (const bottomRecipe of bottomRecipes) {
+        results.push(bottomRecipe);
     }
 
-    return Promise.resolve(whatsForLunch);
+    return Promise.resolve(results);
 }
 
 
