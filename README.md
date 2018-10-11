@@ -4,7 +4,7 @@ This is a simple Vue app that will read in recipes.json and ingredients.json and
 
 The code is in TypeScript. Compilation to JavaScript is automatic, at runtime for development with hot-reload support and at build time for production.
 
-There are no non-node or npm dependencies. You can run this in a docker container, a cloud instance, inside a Node production process manager like PM2 or anything else you like.
+There are no non-node or non-npm dependencies. You can run this in a docker container, a cloud instance, inside a Node production process manager like PM2 or anything else you like.
 
 Prerequisites
 ----
