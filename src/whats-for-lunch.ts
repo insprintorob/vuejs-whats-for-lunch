@@ -1,6 +1,9 @@
 import moment from 'moment';
 
 /**
+ * Fetch recipes
+ *
+ * @return Promise
  * @throws Error
  */
 async function fetchRecipes() : Promise<Array<any>> {
@@ -18,6 +21,9 @@ async function fetchRecipes() : Promise<Array<any>> {
 }
 
 /**
+ * Fetch ingredients
+ *
+ * @return Promise
  * @throws Error
  */
 async function fetchIngredients() : Promise<Array<any>> {
@@ -33,6 +39,10 @@ async function fetchIngredients() : Promise<Array<any>> {
     return Promise.resolve(results);
 }
 
+/**
+ * Return an array of recipes that are good to eat
+ * @return Promise
+ */
 async function whatsForLunch() : Promise<Array<any>> {
     let whatsForLunch : Array<any> = [];
     let bottomRecipes : Array<any> = [];

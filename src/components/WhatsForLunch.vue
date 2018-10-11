@@ -15,10 +15,18 @@ import whatsForLunch from '../whats-for-lunch';
 
 @Component
 export default class WhatsForLunch extends Vue {
+  /**
+   * A list of recipes that are good to eat
+   * @var Array
+   */
   whatsForLunch : Array<any> = [];
 
-  async created() {
+  /**
+   * Initialise the whatsForLunch array on component creation
+   */
+  async created() : Promise<void> {
     this.whatsForLunch = await whatsForLunch();
+    return Promise.resolve();
   }
 }
 </script>
