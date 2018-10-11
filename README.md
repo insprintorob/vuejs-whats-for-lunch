@@ -9,7 +9,7 @@ Clone the repo, then run
 ```
 npm install
 ```
-Once NPM finishes sucessfully, go to http://localhost:8000 in chrome
+Once NPM finishes sucessfully, go to http://localhost:8080/ in chrome
 
 ### Compile and hot-reload for development:
 ```
