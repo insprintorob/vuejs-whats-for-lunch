@@ -1,4 +1,5 @@
 import moment from 'moment';
+const fetch = require('node-fetch'); // Importing it makes it mockable
 
 /**
  * Fetch recipes
@@ -108,4 +109,4 @@ async function whatsForLunch() : Promise<Array<any>> {
 }
 
 
-export default whatsForLunch;
+export { whatsForLunch, fetchIngredients, fetchRecipes };
