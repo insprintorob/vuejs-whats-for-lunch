@@ -4,11 +4,12 @@ This is a simple Vue app that will read in recipes.json and ingredients.json and
 
 The code is in TypeScript. Compilation to JavaScript is automatic, at runtime for development with hot-reload support and at build time for production.
 
-## Installation
+## Getting it running
 Clone the repo, then run
 ```
 npm install
 ```
+Once NPM finishes sucessfully, go to http://localhost:8000 in chrome
 
 ### Compile and hot-reload for development:
 ```
