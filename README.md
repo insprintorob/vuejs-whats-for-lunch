@@ -4,6 +4,16 @@ This is a simple Vue app that will read in recipes.json and ingredients.json and
 
 The code is in TypeScript. Compilation to JavaScript is automatic, at runtime for development with hot-reload support and at build time for production.
 
+Prerequisites
+----
+The latest versions of node and npm
+To build and run this project you will need vue-cli, vue-template-compiler, typescript, @vue/cli-service, @vue/cli-plugin-unit-jest, @vue/cli-plugin-typescript installed globally
+
+Install them all in one go:
+```
+npm install -g vue-cli vue-template-compiler typescript, @vue/cli-service @vue/cli-plugin-unit-jest @vue/cli-plugin-typescript
+```
+
 ## Getting it running
 Clone the repo, then run
 ```
