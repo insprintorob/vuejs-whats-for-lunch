@@ -6,8 +6,7 @@ The code is in TypeScript. Compilation to JavaScript is automatic, at runtime fo
 
 Prerequisites
 ----
-The latest versions of node and npm
-To build and run this project you will need vue-cli, vue-template-compiler, typescript, @vue/cli-service, @vue/cli-plugin-unit-jest, @vue/cli-plugin-typescript installed globally
+The latest versions of node and npm. To build and run this project you will need vue-cli, vue-template-compiler, typescript, @vue/cli-service, @vue/cli-plugin-unit-jest, @vue/cli-plugin-typescript installed globally
 
 Install them all in one go:
 ```
