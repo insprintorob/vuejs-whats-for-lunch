@@ -1,5 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <WhatsForLunch></WhatsForLunch>
   </div>
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import WhatsForLunch from '@/components/WhatsForLunch.vue'; // @ is an alias to /src
+
+@Component({
+  components: {
+    WhatsForLunch,
+  },
+})
+export default class Home extends Vue {}
+</script>
