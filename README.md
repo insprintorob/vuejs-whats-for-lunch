@@ -9,7 +9,11 @@ Clone the repo, then run
 ```
 npm install
 ```
-Once NPM finishes sucessfully, go to http://localhost:8080/ in chrome
+Once NPM finishes sucessfully, start the built in web server by running
+```
+npm run serve
+```
+Then go to http://localhost:8080/ in chrome
 
 ### Compile and hot-reload for development:
 ```
