@@ -25,7 +25,7 @@ jest.mock('node-fetch', () => {
   }
 });
 
-describe('Whats for lunch module test', () => {
+describe('Fetch ingredients function test', () => {
   it('should fetch ingredients', async () => {
     let result = await fetchIngredients();
     expect(result.length).toBeGreaterThan(1);
